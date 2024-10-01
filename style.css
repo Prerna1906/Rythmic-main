@@ -1,0 +1,315 @@
+/* importing two Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body {
+    
+    background-image: url('covers/backback.jpg');
+    color: #fff;
+    font-size: 16px;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px black;
+    border: 5px double #f39c12;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;  /* Centers the logo and text */
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: rgb(250, 246, 246);
+    position: relative;
+}
+
+nav .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px; /* Adds spacing between the logo and text */
+}
+
+nav .brand img {
+    width: 90px;
+    margin-right: 10px;
+}
+
+
+
+
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display:flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('covers/bg.jpg');
+   background-position: center;
+
+
+}
+
+.songItemContainer h2{
+  text-align: center;
+  color: #f39c12;
+}
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.playlist {
+    margin-bottom: 20px;
+}
+
+.playlist h2 {
+    text-align: center;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: black; 
+    color: white;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+}
+
+.songItem:hover {
+    background-color: #665f5f;
+  }
+  
+  .songItem img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .songName {
+    flex: 1;
+    font-weight: bold;
+    color: #fdf6f6;
+  }
+  .songlistplay .timestamp {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .songlistplay .fa-play-circle {
+    font-size: 20px;
+    cursor: pointer;
+    color: #f39c12;
+  }
+  
+  .songlistplay .fa-play-circle:hover {
+    color: #f1c40f;
+  }
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, #1f1f1f, #333);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.progressBarContainer {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-top: 30px;
+    margin-left: 100px;
+   
+}
+
+.songInfo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 2vw;
+  margin-bottom: 20px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+#gif {
+  display: none;
+  margin-right: 15px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icons i {
+  color: #fff;
+transition: color 0.3s ease;
+cursor: pointer;
+}
+
+
+.songInfo img{
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+#currentTime, #totalDuration {
+    color: #ff9800;
+    font-size: 14px;
+    width: 50px;
+    text-align: center;
+}
+
+.icons i:hover {
+    color: #f39c12;
+  }
+
+#myProgressBar {
+    width: 1000px;
+    margin: 0 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #666;
+    background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%);
+    height: 6px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+
+
+#masterSongName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39c12;
+    margin: 0 15px;
+  }
+  
+
+#masterPlay {
+    font-size: 36px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* Add styles for the play and pause buttons */
+.play-button, .pause-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .play-button:hover, .pause-button:hover {
+    background-color: #555;
+  }
+  
+  .play-button i, .pause-button i {
+    font-size: 24px;
+  }
+
+.bottom #volume-control {
+    width: 100px;
+  background-color: transparent;
+  margin: 0 10px;
+}
+
+#volume-control input[type="range"] {
+    width: 150px;
+    margin-left: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background: #666;
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#volume-control input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+  height: 15px;
+  background-color: #f39c12;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#volume-control input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #ff9800;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume-control input[type="range"]:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 15px rgba(255, 152, 0, 1);
+}
+
+#volume-control i {
+    color: #ff9800;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+  .songInfo{
+    position: relative;
+  }
